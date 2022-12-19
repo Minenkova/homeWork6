@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork6</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      for (let i = 0; i < 15; i++) {
+        array[i] = Math.floor(Math.random() * 20);
+      }
+      console.log(array);
+
+      console.log(`==========task2==========`);
+
+      console.log(array.filter((element) => element % 3 === 0));
+
+      console.log(`==========task3==========`);
+
+      const findElement = array.find((element) => element > 7);
+      console.log(findElement);
+
+      if (findElement === true) {
+        console.log("All elements less than 7");
+      }
+
+      console.log(`==========task4==========`);
+
+      const changeArray = array.map((val) => {
+        return val * 2;
+      });
+      console.log(changeArray);
+
+      console.log(`==========task5==========`);
+      const sumNumber = array.reduce((accum, currentValue, initialValue) => {
+        return currentValue % 2 === 0 ? accum + currentValue : accum;
+      }, 0);
+      console.log(sumNumber);
+
+      console.log(`==========task6==========`);
+
+      const delFirstEl = array.slice(1); // delete first element
+      console.log(delFirstEl);
+
+      array.pop(); // delete last element
+      console.log(array);
+
+      console.log(`==========****==========`);
+
+      arrayOne = ["dog", "cat", "bird", "rabbit", "horse"];
+      arrayTwo = ["apple", "car", "cat", "ball", "horse"];
+
+      function arraySame(arr, arrTwo) {
+        return arrayOne.filter((element) => arrayTwo.includes(element));
+      }
+      console.log(arraySame(arrayOne, arrayTwo));
+    </script>
+  </body>
+</html>
